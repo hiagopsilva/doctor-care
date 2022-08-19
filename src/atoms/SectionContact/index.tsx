@@ -8,7 +8,6 @@ import {
   Content,
   IconMail,
   IconMap,
-  Image,
   ImageMen,
   Line,
   Text,

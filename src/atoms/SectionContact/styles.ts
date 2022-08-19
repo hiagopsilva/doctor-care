@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Mail, Maps, Whatsapp } from '~/assets';
+import { Mail, Maps } from '~/assets';
 import { getTheme, pxToRem } from '~/utils';
 
 // Colors
@@ -8,7 +8,6 @@ const primaryDark = getTheme('primary.dark');
 const primaryMain = getTheme('primary.main');
 const primaryLight = getTheme('primary.light');
 const secondaryDark = getTheme('secondary.dark');
-const secondaryMain = getTheme('secondary.main');
 
 export const Container = styled.div`
   height: ${pxToRem(699)};
@@ -54,12 +53,6 @@ export const Text = styled.div`
 `;
 
 export const IconMail = styled(Mail)``;
-
-export const Image = styled.img`
-  margin-right: ${pxToRem(17)};
-  width: 200px;
-  height: 200px;
-`;
 
 export const Button = styled.button`
   margin-top: ${pxToRem(30)};
