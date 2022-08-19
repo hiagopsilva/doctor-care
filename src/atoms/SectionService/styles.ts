@@ -53,7 +53,7 @@ export const WrapperCards = styled.div`
 export const Card = styled.div`
   background-color: ${primaryLight};
 
-  width: 30%;
+  width: 31%;
 
   padding: ${pxToRem(20)};
 

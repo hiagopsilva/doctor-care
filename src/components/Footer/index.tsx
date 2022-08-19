@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 
-import { Logo } from '~/assets';
-
 import {
   Content,
   IconFacebook,
   IconInstagram,
   IconYoutube,
+  Logo,
   Text,
   Wrapper,
   WrapperSocial,
