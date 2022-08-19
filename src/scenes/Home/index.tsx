@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SectionHero, SectionService } from '~/atoms';
+import { SectionAbout, SectionHero, SectionService } from '~/atoms';
 import { Header } from '~/components';
 
 import { Container } from './styles';
@@ -12,6 +12,7 @@ const Home: React.FC<Props> = () => (
     <Header />
     <SectionHero />
     <SectionService />
+    <SectionAbout />
   </Container>
 );
 
