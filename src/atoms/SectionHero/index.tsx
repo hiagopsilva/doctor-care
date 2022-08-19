@@ -30,7 +30,6 @@ const SectionHero: FC<Props> = () => {
           </SubTitle>
           <Description>
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
-            <br />
             raiz de sua doença e proporcionar uma cura a longo prazo.
           </Description>
 

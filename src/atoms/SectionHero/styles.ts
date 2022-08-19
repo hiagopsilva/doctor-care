@@ -48,12 +48,14 @@ export const SubTitle = styled.h4`
 
   font-size: ${pxToRem(52)};
   font-weight: 500;
+  width: ${pxToRem(580)};
 
   margin-top: ${pxToRem(15)};
 `;
 
 export const Description = styled.h4`
   margin-top: ${pxToRem(24)};
+  width: ${pxToRem(520)};
 
   font-size: ${pxToRem(18)};
   font-weight: normal;
@@ -88,7 +90,7 @@ export const Button = styled.div`
 `;
 
 export const ImageWomen = styled(Women)`
-  margin-right: ${pxToRem(62)};
+  /* margin-right: ${pxToRem(42)}; */
 `;
 
 export const WrapperInfo = styled.div`
