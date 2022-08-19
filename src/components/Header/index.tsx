@@ -18,9 +18,6 @@ const Header: FC<Props> = ({ ...rest }) => {
   useEffect(() => {
     function onScroll() {
       window.scrollY > 0 ? setIsActive(true) : setIsActive(false);
-      console.log(window.scrollY);
-
-      console.log(isActive);
     }
 
     window.addEventListener('scroll', onScroll);
