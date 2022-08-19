@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-import { Hamburger, HamburgerSecondary, Logo, LogoSecondary } from '~/assets';
+import {
+  Close,
+  Hamburger,
+  HamburgerSecondary,
+  Logo,
+  LogoSecondary,
+} from '~/assets';
 import { getTheme, pxToRem } from '~/utils';
 
 type PropsWrapper = {
@@ -146,16 +152,23 @@ export const Button = styled.div<PropsWrapper>`
   }
 `;
 
-export const IconHamburger = styled(Hamburger)`
+export const IconHamburger = styled(Hamburger)<PropsWrapper>`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
 
-  display: block;
+  display: ${props => (props.active ? 'none' : 'block')};
 `;
 
-export const IconHamburgerSecondary = styled(HamburgerSecondary)`
+export const IconHamburgerSecondary = styled(HamburgerSecondary)<PropsWrapper>`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
 
-  display: none;
+  display: ${props => (props.active ? 'none' : 'block')};
+`;
+
+export const IconCloseSecondary = styled(Close)<PropsWrapper>`
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+
+  display: ${props => (props.active ? 'block' : 'none')};
 `;

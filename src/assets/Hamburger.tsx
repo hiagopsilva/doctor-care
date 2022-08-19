@@ -4,9 +4,16 @@ type Props = {
   width?: number | string;
   height?: number | string;
   className?: string;
+  onClick?: () => void;
 };
 
-const Svg: FC<Props> = ({ width = 40, height = 40, className, ...rest }) => (
+const Svg: FC<Props> = ({
+  width = 40,
+  height = 40,
+  className,
+  onClick,
+  ...rest
+}) => (
   <svg
     width={width}
     height={height}
@@ -14,6 +21,7 @@ const Svg: FC<Props> = ({ width = 40, height = 40, className, ...rest }) => (
     fill="none"
     className={className}
     xmlns="http://www.w3.org/2000/svg"
+    onClick={onClick}
     {...rest}
   >
     <path

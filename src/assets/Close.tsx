@@ -17,29 +17,15 @@ const Svg: FC<Props> = ({
   <svg
     width={width}
     height={height}
+    className={className}
     viewBox="0 0 40 40"
     fill="none"
-    className={className}
-    onClick={onClick}
     xmlns="http://www.w3.org/2000/svg"
+    onClick={onClick}
     {...rest}
   >
     <path
-      d="M10 20H30"
-      stroke="#FFFAF1"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M10 12H30"
-      stroke="#FFFAF1"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M18 28L30 28"
+      d="M30 10L10 30M10 10L30 30"
       stroke="#FFFAF1"
       strokeWidth="2"
       strokeLinecap="round"

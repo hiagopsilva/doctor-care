@@ -11,6 +11,7 @@ import {
   LogoSecondaryStyled,
   IconHamburger,
   IconHamburgerSecondary,
+  IconCloseSecondary,
 } from './styles';
 
 type Props = {};
@@ -18,6 +19,8 @@ type Props = {};
 const Header: FC<Props> = ({ ...rest }) => {
   const [isActive, setIsActive] = useState(false);
   const [menu, setMenu] = useState(OptionMenu[0]);
+
+  const [activeOptionMenu, setActiveOptionMenu] = useState(false);
 
   useEffect(() => {
     function onScroll() {
@@ -48,8 +51,22 @@ const Header: FC<Props> = ({ ...rest }) => {
 
       <Button active={isActive}>AGENDAR CONSULTA</Button>
 
-      <IconHamburger className="icon-hamburger-primary" />
-      <IconHamburgerSecondary className="icon-hamburger-secondary" />
+      <IconHamburger
+        className="icon-hamburger-primary"
+        onClick={() => {
+          setActiveOptionMenu(prevState => !prevState);
+        }}
+        active={activeOptionMenu}
+      />
+      <IconHamburgerSecondary
+        className="icon-hamburger-secondary"
+        onClick={() => {
+          setActiveOptionMenu(prevState => !prevState);
+        }}
+        active={activeOptionMenu}
+      />
+
+      <IconCloseSecondary active={activeOptionMenu} />
     </Wrapper>
   );
 };
