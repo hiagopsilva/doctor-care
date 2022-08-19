@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Facebook, Instagram, Logo, Youtube } from '~/assets';
+import { Logo } from '~/assets';
 
 import {
   Content,
