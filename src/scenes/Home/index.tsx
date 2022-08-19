@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { SectionHero } from '~/atoms';
 import { Header } from '~/components';
 
-import { Container, SectionHero } from './styles';
+import { Container } from './styles';
 
 type Props = {};
 

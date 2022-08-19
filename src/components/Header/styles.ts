@@ -11,6 +11,8 @@ const primaryLight = getTheme('primary.light');
 export const Wrapper = styled.div`
   background-color: ${primaryContrast};
 
+  position: absolute;
+
   width: 100%;
   height: ${pxToRem(72)};
 
