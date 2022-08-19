@@ -3,15 +3,17 @@ import React, { FC } from 'react';
 type Props = {
   width?: number | string;
   height?: number | string;
+  className?: string;
 };
 
-const Svg: FC<Props> = ({ width = 256, height = 33, ...rest }) => (
+const Svg: FC<Props> = ({ width = 256, height = 33, className, ...rest }) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 256 33"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
     {...rest}
   >
     <path

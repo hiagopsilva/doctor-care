@@ -1,30 +1,54 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
-import { Wrapper, LogoStyled, Options, Option, Text, Button } from './styles';
+import {
+  Wrapper,
+  Options,
+  Option,
+  Text,
+  Button,
+  LogoPrimaryStyled,
+  LogoSecondaryStyled,
+} from './styles';
 
 type Props = {};
 
 const Header: FC<Props> = ({ ...rest }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      window.scrollY > 0 ? setIsActive(true) : setIsActive(false);
+      console.log(window.scrollY);
+
+      console.log(isActive);
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <Wrapper {...rest}>
-      <LogoStyled />
+    <Wrapper active={isActive} {...rest}>
+      <LogoPrimaryStyled className="logo-primary" />
+      <LogoSecondaryStyled className="logo-secondary" />
 
       <Options>
         <Option>
-          <Text>Início</Text>
+          <span>Início</span>
         </Option>
         <Option>
-          <Text>Sobre</Text>
+          <span>Sobre</span>
         </Option>
         <Option>
-          <Text>Serviços</Text>
+          <span>Serviços</span>
         </Option>
         <Option>
-          <Text>Depoimentos</Text>
+          <span>Depoimentos</span>
         </Option>
       </Options>
 
-      <Button>AGENDAR CONSULTA</Button>
+      <Button active={isActive}>AGENDAR CONSULTA</Button>
     </Wrapper>
   );
 };

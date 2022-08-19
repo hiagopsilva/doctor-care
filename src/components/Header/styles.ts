@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
-import { Logo } from '~/assets';
+import { Logo, LogoSecondary } from '~/assets';
 import { getTheme, pxToRem } from '~/utils';
+
+type PropsWrapper = {
+  active: boolean;
+};
 
 // Colors
 const primaryContrast = getTheme('primary.contrast');
 const primaryMain = getTheme('primary.main');
 const primaryLight = getTheme('primary.light');
 
-export const Wrapper = styled.div`
-  background-color: ${primaryContrast};
+export const Wrapper = styled.div<PropsWrapper>`
+  background-color: ${props =>
+    props.active ? primaryMain(props) : primaryContrast(props)};
 
   position: fixed;
   z-index: 1000;
@@ -23,11 +28,38 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 ${pxToRem(124)};
+
+  span {
+    color: ${props =>
+      props.active ? primaryContrast(props) : primaryMain(props)};
+  }
+
+  span:hover {
+    font-weight: bold;
+    color: ${primaryMain};
+  }
+
+  svg.logo-primary {
+    display: ${props => (props.active ? 'none' : 'block')};
+  }
+
+  svg.logo-secondary {
+    display: ${props => (props.active ? 'block' : 'none')};
+  }
 `;
 
-export const LogoStyled = styled(Logo)`
+export const LogoPrimaryStyled = styled(Logo)`
   width: ${pxToRem(150)};
   height: ${pxToRem(40)};
+
+  display: block;
+`;
+
+export const LogoSecondaryStyled = styled(LogoSecondary)`
+  width: ${pxToRem(150)};
+  height: ${pxToRem(40)};
+
+  display: none;
 `;
 
 export const Options = styled.div`
@@ -52,20 +84,14 @@ export const Option = styled.div`
   }
 `;
 
-export const Text = styled.div`
-  color: ${primaryMain};
+export const Text = styled.span``;
 
-  &:hover {
-    font-weight: bold;
-    color: ${primaryMain};
-  }
-`;
-
-export const Button = styled.div`
+export const Button = styled.div<PropsWrapper>`
   width: ${pxToRem(190)};
   height: ${pxToRem(38)};
 
-  border: 1px solid ${primaryMain};
+  border: 1px solid
+    ${props => (props.active ? primaryLight(props) : primaryMain(props))};
   border-radius: ${pxToRem(40)};
 
   display: flex;
@@ -74,13 +100,15 @@ export const Button = styled.div`
 
   font-size: ${pxToRem(14)};
   font-weight: bold;
-  color: ${primaryMain};
+  color: ${props => (props.active ? primaryLight(props) : primaryMain(props))};
 
   cursor: pointer;
 
   &:hover {
     font-weight: bold;
-    color: ${primaryLight};
-    background-color: ${primaryMain};
+    color: ${props =>
+      props.active ? primaryMain(props) : primaryLight(props)};
+    background-color: ${props =>
+      props.active ? primaryLight(props) : primaryMain(props)};
   }
 `;
