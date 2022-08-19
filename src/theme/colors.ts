@@ -7,14 +7,14 @@ export default {
   primary: {
     light: '#fff',
     main: '#00856f',
-    dark: '',
+    dark: '#061800',
     text: '',
     contrast: '#DCE9E2',
   },
   secondary: {
-    light: '',
+    light: '#DCE9E2',
     main: '',
-    dark: '',
+    dark: '#384633',
     hover: '',
     contrast: '',
   },
