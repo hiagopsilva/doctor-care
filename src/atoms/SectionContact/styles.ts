@@ -77,11 +77,12 @@ export const Button = styled.button`
   font-size: ${pxToRem(16)};
   font-weight: bold;
   color: ${primaryLight};
+  background-color: ${primaryMain};
 
   cursor: pointer;
 
   svg {
-    margin-right: ${pxToRem(17)};
+    margin-right: ${pxToRem(8)};
   }
 
   svg.whatsapp {
