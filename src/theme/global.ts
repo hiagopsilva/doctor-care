@@ -9,6 +9,6 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
   }
 `;
