@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { SectionAbout, SectionHero, SectionService } from '~/atoms';
+import {
+  SectionAbout,
+  SectionContact,
+  SectionHero,
+  SectionService,
+} from '~/atoms';
 import { Header } from '~/components';
 
 import { Container } from './styles';
@@ -13,6 +18,7 @@ const Home: React.FC<Props> = () => (
     <SectionHero />
     <SectionService />
     <SectionAbout />
+    <SectionContact />
   </Container>
 );
 
