@@ -98,7 +98,7 @@ export const WrapperInfo = styled.div`
   height: ${pxToRem(210)};
 
   margin-top: -${pxToRem(70)};
-  z-index: 1;
+  z-index: 100;
   position: sticky;
 
   display: flex;
