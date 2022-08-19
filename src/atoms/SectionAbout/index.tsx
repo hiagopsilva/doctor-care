@@ -27,20 +27,13 @@ const SectionAbout: FC<Props> = () => {
           </Title>
           <Description>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            <br />
-            Velit officia consequat duis enim. Amet minim mollit non deserunt
-            ullamco
-            <br /> est sit aliqua dolor do amet sint. Velit officia consequat
-            duis enim. Amet
-            <br /> minim mollit non deserunt ullamco est sit aliqua dolor do
-            amet sint. Velit <br />
-            officia consequat duis enim. Amet minim mollit non deserunt ullamco
-            est sit <br />
+            sint. Velit officia consequat duis enim. Amet minim mollit non
+            deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+            consequat duis enim. Amet minim mollit non deserunt ullamco est sit
             aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
-            minim
-            <br />
-            mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim. Amet minim mollit non deserunt
+            ullamco est sit aliqua dolor do amet sint.
           </Description>
         </Content>
       </Wrapper>
