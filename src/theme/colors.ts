@@ -6,10 +6,10 @@ export default {
 
   primary: {
     light: '#fff',
-    main: '#46eb34',
-    dark: '#111411',
-    text: '#f9f9f9',
-    contrast: '#313136',
+    main: '#00856f',
+    dark: '',
+    text: '',
+    contrast: '#DCE9E2',
   },
   secondary: {
     light: '',
