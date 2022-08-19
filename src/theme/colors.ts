@@ -13,7 +13,7 @@ export default {
   },
   secondary: {
     light: '#DCE9E2',
-    main: '',
+    main: '#FFFAF1',
     dark: '#384633',
     hover: '',
     contrast: '',

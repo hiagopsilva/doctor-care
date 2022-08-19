@@ -9,6 +9,8 @@ const primaryMain = getTheme('primary.main');
 const primaryDark = getTheme('primary.dark');
 const primaryLight = getTheme('primary.light');
 const secondaryDark = getTheme('secondary.dark');
+const secondaryMain = getTheme('secondary.main');
+const primaryContrast = getTheme('primary.contrast');
 
 export const Container = styled.div`
   width: 100%;
@@ -89,10 +91,51 @@ export const ImageWomen = styled(Women)`
   margin-right: ${pxToRem(62)};
 `;
 
-export const WrapperInfo = styled.div``;
+export const WrapperInfo = styled.div`
+  background-color: ${secondaryMain};
 
-export const ContentInfo = styled.div``;
+  width: 100%;
+  height: ${pxToRem(210)};
 
-export const Info = styled.h4``;
+  margin-top: -${pxToRem(70)};
+  z-index: 1;
+  position: sticky;
 
-export const Text = styled.h4``;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  border-radius: ${pxToRem(6)};
+  border: 1px solid ${primaryContrast};
+`;
+
+export const ContentInfo = styled.div`
+  width: 33%;
+
+  border-right: 1px solid ${primaryMain};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-last-child(3n + 1) {
+    border-right: none;
+  }
+`;
+
+export const Info = styled.h4`
+  color: ${primaryDark};
+
+  font-size: ${pxToRem(48)};
+  font-weight: bold;
+`;
+
+export const Text = styled.h4`
+  color: ${primaryMain};
+
+  font-size: ${pxToRem(16)};
+  font-weight: 300;
+
+  margin-top: ${pxToRem(4)};
+`;
