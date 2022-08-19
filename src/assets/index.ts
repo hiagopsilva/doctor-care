@@ -6,3 +6,7 @@ export { default as Men } from './men.png';
 export { default as Mail } from './Mail';
 export { default as Maps } from './Maps';
 export { default as Whatsapp } from './Whatsapp';
+export { default as Facebook } from './Facebook';
+export { default as Instagram } from './Instagram';
+export { default as Youtube } from './Youtube';
+export { default as LogoSecondary } from './LogoSecondary';
