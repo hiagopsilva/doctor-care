@@ -10,29 +10,44 @@ const primaryDark = getTheme('primary.dark');
 const primaryLight = getTheme('primary.light');
 const secondaryDark = getTheme('secondary.dark');
 const secondaryMain = getTheme('secondary.main');
+const secondaryContrast = getTheme('secondary.contrast');
 const primaryContrast = getTheme('primary.contrast');
 
+const inMobile = getTheme('inMobile');
+
 export const Container = styled.div`
-  width: 100%;
-  height: ${pxToRem(678)};
+  background: ${secondaryContrast};
+  position: relative;
+  margin-top: ${pxToRem(72)};
 
-  padding-top: ${pxToRem(72)};
-
-  background: ${secondaryLight};
-  padding: 0 ${pxToRem(124)};
+  height: ${pxToRem(1340)};
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex: 1;
+  width: 100%;
+  height: ${pxToRem(678)};
 
-  margin-top: ${pxToRem(72)};
+  background: ${secondaryLight};
+  padding: ${pxToRem(72)} ${pxToRem(124)} 0;
 
-  justify-content: space-between;
+  @media ${inMobile} {
+    height: auto;
+    padding: 0 ${pxToRem(29)};
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const Content = styled.div`
   margin-top: ${pxToRem(77)};
+
+  @media ${inMobile} {
+    margin-top: ${pxToRem(40)};
+
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h4`
@@ -41,6 +56,10 @@ export const Title = styled.h4`
   font-size: ${pxToRem(14)};
   font-weight: bold;
   letter-spacing: ${pxToRem(4)};
+
+  @media ${inMobile} {
+    text-align: center;
+  }
 `;
 
 export const SubTitle = styled.h4`
@@ -51,6 +70,14 @@ export const SubTitle = styled.h4`
   width: ${pxToRem(580)};
 
   margin-top: ${pxToRem(15)};
+
+  @media ${inMobile} {
+    text-align: center;
+    font-size: ${pxToRem(34)};
+    font-weight: 500;
+
+    width: 100%;
+  }
 `;
 
 export const Description = styled.h4`
@@ -60,6 +87,13 @@ export const Description = styled.h4`
   font-size: ${pxToRem(18)};
   font-weight: normal;
   color: ${secondaryDark};
+
+  @media ${inMobile} {
+    text-align: center;
+    font-size: ${pxToRem(18)};
+
+    width: 100%;
+  }
 `;
 
 export const Button = styled.div`
@@ -112,9 +146,21 @@ export const Button = styled.div`
       display: block;
     }
   }
+
+  @media ${inMobile} {
+    margin: 0 auto;
+    margin-top: ${pxToRem(20)};
+  }
 `;
 
-export const ImageWomen = styled(Women)``;
+export const ImageWomen = styled(Women)`
+  @media ${inMobile} {
+    width: 100%;
+
+    margin-top: -${pxToRem(50)};
+    margin-bottom: ${pxToRem(150)};
+  }
+`;
 
 export const WrapperInfo = styled.div`
   background-color: ${secondaryMain};
@@ -133,6 +179,20 @@ export const WrapperInfo = styled.div`
 
   border-radius: ${pxToRem(6)};
   border: 1px solid ${primaryContrast};
+
+  @media ${inMobile} {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+
+    position: relative;
+    bottom: ${pxToRem(30)};
+    margin: ${pxToRem(60)} ${pxToRem(29)} 0;
+
+    top: -${pxToRem(340)};
+
+    padding: ${pxToRem(60)} 0;
+  }
 `;
 
 export const ContentInfo = styled.div`
@@ -147,6 +207,17 @@ export const ContentInfo = styled.div`
   &:nth-last-child(3n + 1) {
     border-right: none;
   }
+
+  @media ${inMobile} {
+    border: none;
+
+    width: 80%;
+    margin-bottom: ${pxToRem(67)};
+
+    &:nth-last-child(3n + 1) {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export const Info = styled.h4`
@@ -154,6 +225,10 @@ export const Info = styled.h4`
 
   font-size: ${pxToRem(48)};
   font-weight: bold;
+
+  @media ${inMobile} {
+    border: none;
+  }
 `;
 
 export const Text = styled.h4`
@@ -163,4 +238,8 @@ export const Text = styled.h4`
   font-weight: 300;
 
   margin-top: ${pxToRem(4)};
+
+  @media ${inMobile} {
+    border: none;
+  }
 `;

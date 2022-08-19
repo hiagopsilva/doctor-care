@@ -43,6 +43,7 @@ const SectionHero: FC<Props> = () => {
         </Content>
         <ImageWomen />
       </Wrapper>
+
       <WrapperInfo>
         <ContentInfo>
           <Info>+3.500</Info>
