@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import { OptionCard } from '~/utils';
+
 import {
   Card,
   Description,
@@ -13,15 +15,6 @@ import {
 
 type Props = {};
 
-const data = [
-  'Problemas digestivos',
-  'Saúde Hormonal',
-  'Bem-estar mental',
-  'Cuidados Pediátricos',
-  'Autoimune e Inflamação',
-  'Saúde do Coração',
-];
-
 const SectionService: FC<Props> = () => {
   return (
     <Wrapper>
@@ -33,7 +26,7 @@ const SectionService: FC<Props> = () => {
       </Title>
 
       <WrapperCards>
-        {data.map(item => (
+        {OptionCard.map(item => (
           <Card>
             <Icon />
             <Text>{item}</Text>
