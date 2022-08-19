@@ -84,8 +84,6 @@ export const Option = styled.div`
   }
 `;
 
-export const Text = styled.span``;
-
 export const Button = styled.div<PropsWrapper>`
   width: ${pxToRem(190)};
   height: ${pxToRem(38)};

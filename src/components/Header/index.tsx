@@ -4,7 +4,6 @@ import {
   Wrapper,
   Options,
   Option,
-  Text,
   Button,
   LogoPrimaryStyled,
   LogoSecondaryStyled,
