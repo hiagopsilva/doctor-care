@@ -19,7 +19,7 @@ export default {
     contrast: '#F7F9F9',
   },
   tertiary: {
-    light: '',
+    light: '#FFFAF1',
     main: '',
     dark: '',
     contrast: '',
