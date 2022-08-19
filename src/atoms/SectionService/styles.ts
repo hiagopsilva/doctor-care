@@ -11,6 +11,8 @@ const secondaryContrast = getTheme('secondary.contrast');
 const secondaryDark = getTheme('secondary.dark');
 const primaryContrast = getTheme('primary.contrast');
 
+const inMobile = getTheme('inMobile');
+
 export const Wrapper = styled.div`
   width: 100%;
   height: ${pxToRem(1082)};
@@ -21,6 +23,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 ${pxToRem(124)};
+
+  @media ${inMobile} {
+    padding: 0 ${pxToRem(29)} ${pxToRem(100)};
+
+    height: auto;
+  }
 `;
 
 export const Info = styled.div`
@@ -30,6 +38,11 @@ export const Info = styled.div`
   color: ${primaryMain};
 
   margin-top: ${pxToRem(240)};
+
+  @media ${inMobile} {
+    margin-top: ${pxToRem(100)};
+    margin-bottom: ${pxToRem(24)};
+  }
 `;
 
 export const Title = styled.div`
@@ -38,6 +51,12 @@ export const Title = styled.div`
 
   color: ${primaryDark};
   text-align: center;
+
+  @media ${inMobile} {
+    font-size: ${pxToRem(30)};
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 export const WrapperCards = styled.div`
@@ -62,6 +81,12 @@ export const Card = styled.div`
   margin-bottom: ${pxToRem(40)};
 
   cursor: pointer;
+
+  @media ${inMobile} {
+    font-size: ${pxToRem(30)};
+    width: 100%;
+    margin-bottom: ${pxToRem(40)};
+  }
 `;
 
 export const Icon = styled(Check)`
@@ -76,6 +101,12 @@ export const Text = styled.div`
   color: ${primaryDark};
 
   margin-top: ${pxToRem(16)};
+
+  @media ${inMobile} {
+    font-size: ${pxToRem(24)};
+
+    margin-top: ${pxToRem(6)};
+  }
 `;
 
 export const Description = styled.div`
@@ -85,4 +116,8 @@ export const Description = styled.div`
   font-weight: 400;
 
   margin-top: ${pxToRem(14)};
+
+  @media ${inMobile} {
+    font-size: ${pxToRem(16)};
+  }
 `;
