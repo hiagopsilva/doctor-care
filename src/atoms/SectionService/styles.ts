@@ -54,9 +54,8 @@ export const Card = styled.div`
   background-color: ${primaryLight};
 
   width: 30%;
-  height: ${pxToRem(207)};
 
-  padding: ${pxToRem(24)};
+  padding: ${pxToRem(20)};
 
   border: 1px solid ${primaryContrast};
   border-radius: ${pxToRem(6)};
@@ -71,7 +70,7 @@ export const Icon = styled(Check)`
 `;
 
 export const Text = styled.div`
-  font-size: ${pxToRem(24)};
+  font-size: ${pxToRem(22)};
   font-weight: bold;
 
   color: ${primaryDark};
@@ -82,8 +81,8 @@ export const Text = styled.div`
 export const Description = styled.div`
   color: ${secondaryDark};
 
-  font-size: ${pxToRem(16)};
+  font-size: ${pxToRem(14)};
   font-weight: 400;
 
-  margin-top: ${pxToRem(16)};
+  margin-top: ${pxToRem(14)};
 `;
