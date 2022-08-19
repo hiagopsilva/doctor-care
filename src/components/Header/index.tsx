@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 
+import { OptionMenu } from '~/utils';
+
 import {
   Wrapper,
   Options,
@@ -13,6 +15,7 @@ type Props = {};
 
 const Header: FC<Props> = ({ ...rest }) => {
   const [isActive, setIsActive] = useState(false);
+  const [menu, setMenu] = useState(OptionMenu[0]);
 
   useEffect(() => {
     function onScroll() {
@@ -30,18 +33,15 @@ const Header: FC<Props> = ({ ...rest }) => {
       <LogoSecondaryStyled className="logo-secondary" />
 
       <Options>
-        <Option>
-          <span>Início</span>
-        </Option>
-        <Option>
-          <span>Sobre</span>
-        </Option>
-        <Option>
-          <span>Serviços</span>
-        </Option>
-        <Option>
-          <span>Depoimentos</span>
-        </Option>
+        {OptionMenu.map(item => (
+          <Option
+            active={isActive}
+            className={item === menu ? 'activeScroll' : ''}
+            onClick={() => setMenu(item)}
+          >
+            <span>{item}</span>
+          </Option>
+        ))}
       </Options>
 
       <Button active={isActive}>AGENDAR CONSULTA</Button>

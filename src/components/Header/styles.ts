@@ -29,16 +29,6 @@ export const Wrapper = styled.div<PropsWrapper>`
   justify-content: space-between;
   padding: 0 ${pxToRem(124)};
 
-  span {
-    color: ${props =>
-      props.active ? primaryContrast(props) : primaryMain(props)};
-  }
-
-  span:hover {
-    font-weight: bold;
-    color: ${primaryMain};
-  }
-
   svg.logo-primary {
     display: ${props => (props.active ? 'none' : 'block')};
   }
@@ -73,14 +63,32 @@ export const Options = styled.div`
   height: ${pxToRem(72)};
 `;
 
-export const Option = styled.div`
+export const Option = styled.button<PropsWrapper>`
   height: ${pxToRem(72)};
+  background: transparent;
+  border: none;
 
   display: flex;
   align-items: center;
 
-  &:hover {
-    border-bottom: 2px solid ${primaryMain};
+  cursor: pointer;
+
+  &.activeScroll {
+    border-bottom: 2px solid
+      ${props => (props.active ? primaryContrast(props) : primaryMain(props))};
+  }
+
+  &.activeScroll > span {
+    font-weight: bold;
+    color: ${props =>
+      props.active ? primaryContrast(props) : primaryMain(props)};
+  }
+
+  span {
+    color: ${props =>
+      props.active ? primaryContrast(props) : primaryMain(props)};
+    font-weight: 400;
+    font-size: ${pxToRem(16)};
   }
 `;
 
