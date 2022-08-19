@@ -20,7 +20,9 @@ export const Container = styled.div`
   position: relative;
   margin-top: ${pxToRem(72)};
 
-  height: ${pxToRem(1340)};
+  @media ${inMobile} {
+    height: ${pxToRem(1340)};
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -29,6 +31,10 @@ export const Wrapper = styled.div`
 
   background: ${secondaryLight};
   padding: ${pxToRem(72)} ${pxToRem(124)} 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   @media ${inMobile} {
     height: auto;
@@ -165,10 +171,9 @@ export const ImageWomen = styled(Women)`
 export const WrapperInfo = styled.div`
   background-color: ${secondaryMain};
 
-  width: 100%;
+  width: auto;
   height: ${pxToRem(210)};
 
-  margin-top: -${pxToRem(70)};
   z-index: 100;
   position: sticky;
 
@@ -179,6 +184,9 @@ export const WrapperInfo = styled.div`
 
   border-radius: ${pxToRem(6)};
   border: 1px solid ${primaryContrast};
+
+  margin: 0 ${pxToRem(124)};
+  margin-top: -${pxToRem(90)};
 
   @media ${inMobile} {
     flex-direction: column;
