@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import { Whatsapp } from '~/assets';
+
 import {
   Button,
   Container,
@@ -33,7 +35,11 @@ const SectionHero: FC<Props> = () => {
             raiz de sua doença e proporcionar uma cura a longo prazo.
           </Description>
 
-          <Button>AGENDE SUA CONSULTA</Button>
+          <Button>
+            <Whatsapp className="whatsapp" />
+            <Whatsapp className="whatsappHover" color="#00856f" />
+            <span>AGENDE SUA CONSULTA</span>
+          </Button>
         </Content>
         <ImageWomen />
       </Wrapper>

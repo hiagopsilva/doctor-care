@@ -75,23 +75,46 @@ export const Button = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-size: ${pxToRem(16)};
-  font-weight: bold;
-  color: ${primaryLight};
   background-color: ${primaryMain};
 
   cursor: pointer;
+
+  svg.whatsapp {
+    display: block;
+  }
+
+  svg.whatsappHover {
+    display: none;
+  }
+
+  span {
+    margin-left: ${pxToRem(8)};
+
+    font-size: ${pxToRem(16)};
+    font-weight: bold;
+    color: ${primaryLight};
+  }
 
   &:hover {
     font-weight: bold;
     color: ${primaryMain};
     background-color: transparent;
+
+    svg.whatsapp {
+      display: none;
+    }
+
+    span {
+      color: ${primaryMain};
+    }
+
+    svg.whatsappHover {
+      display: block;
+    }
   }
 `;
 
-export const ImageWomen = styled(Women)`
-  /* margin-right: ${pxToRem(42)}; */
-`;
+export const ImageWomen = styled(Women)``;
 
 export const WrapperInfo = styled.div`
   background-color: ${secondaryMain};
