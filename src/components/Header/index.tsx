@@ -9,6 +9,8 @@ import {
   Button,
   LogoPrimaryStyled,
   LogoSecondaryStyled,
+  IconHamburger,
+  IconHamburgerSecondary,
 } from './styles';
 
 type Props = {};
@@ -45,6 +47,9 @@ const Header: FC<Props> = ({ ...rest }) => {
       </Options>
 
       <Button active={isActive}>AGENDAR CONSULTA</Button>
+
+      <IconHamburger className="icon-hamburger-primary" />
+      <IconHamburgerSecondary className="icon-hamburger-secondary" />
     </Wrapper>
   );
 };

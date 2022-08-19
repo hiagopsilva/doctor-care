@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-import { Logo, LogoSecondary } from '~/assets';
+import { Hamburger, HamburgerSecondary, Logo, LogoSecondary } from '~/assets';
 import { getTheme, pxToRem } from '~/utils';
 
 type PropsWrapper = {
   active: boolean;
 };
+
+const inMobile = getTheme('inMobile');
+const inTablet = getTheme('inTablet');
 
 // Colors
 const primaryContrast = getTheme('primary.contrast');
@@ -36,6 +39,22 @@ export const Wrapper = styled.div<PropsWrapper>`
   svg.logo-secondary {
     display: ${props => (props.active ? 'block' : 'none')};
   }
+
+  svg.icon-hamburger-primary {
+    display: ${props => (props.active ? 'none' : 'block')};
+  }
+
+  svg.icon-hamburger-secondary {
+    display: ${props => (props.active ? 'block' : 'none')};
+  }
+
+  @media ${inMobile} {
+    padding: 0 ${pxToRem(25)};
+  }
+
+  @media ${inTablet} {
+    padding: 0 ${pxToRem(50)};
+  }
 `;
 
 export const LogoPrimaryStyled = styled(Logo)`
@@ -61,6 +80,10 @@ export const Options = styled.div`
 
   width: ${pxToRem(350)};
   height: ${pxToRem(72)};
+
+  @media ${inMobile} {
+    display: none;
+  }
 `;
 
 export const Option = styled.button<PropsWrapper>`
@@ -117,4 +140,22 @@ export const Button = styled.div<PropsWrapper>`
     background-color: ${props =>
       props.active ? primaryLight(props) : primaryMain(props)};
   }
+
+  @media ${inMobile} {
+    display: none;
+  }
+`;
+
+export const IconHamburger = styled(Hamburger)`
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+
+  display: block;
+`;
+
+export const IconHamburgerSecondary = styled(HamburgerSecondary)`
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+
+  display: none;
 `;
