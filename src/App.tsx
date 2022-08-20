@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
+
+import { ThemeProvider } from 'styled-components';
+
 import React from 'react';
 import { Router } from 'react-router-dom';
 
 import { createBrowserHistory } from 'history';
 import { Provider } from 'mobx-react';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
-import { ThemeProvider } from 'styled-components';
 
 import 'react-toastify/dist/ReactToastify.css';
 
